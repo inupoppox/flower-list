@@ -9,20 +9,23 @@
 /* Begin PBXBuildFile section */
 		BDE4FBBA28B24F1F001FCEC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBB928B24F1F001FCEC1 /* AppDelegate.swift */; };
 		BDE4FBBC28B24F1F001FCEC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBBB28B24F1F001FCEC1 /* SceneDelegate.swift */; };
-		BDE4FBBE28B24F1F001FCEC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBBD28B24F1F001FCEC1 /* ViewController.swift */; };
+		BDE4FBBE28B24F1F001FCEC1 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBBD28B24F1F001FCEC1 /* LandingViewController.swift */; };
 		BDE4FBC128B24F1F001FCEC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4FBBF28B24F1F001FCEC1 /* Main.storyboard */; };
 		BDE4FBC328B24F22001FCEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE4FBC228B24F22001FCEC1 /* Assets.xcassets */; };
 		BDE4FBC628B24F22001FCEC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE4FBC428B24F22001FCEC1 /* LaunchScreen.storyboard */; };
 		BDE4FBD028B24FF6001FCEC1 /* UIImageView+Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBCF28B24FF6001FCEC1 /* UIImageView+Caching.swift */; };
 		BDE4FBD228B2501E001FCEC1 /* UIViewController+HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBD128B2501E001FCEC1 /* UIViewController+HideKeyboard.swift */; };
 		BDE4FBD428B25044001FCEC1 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBD328B25044001FCEC1 /* Loader.swift */; };
+		BDE4FBF228B35BF6001FCEC1 /* FlowerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBF028B35BF6001FCEC1 /* FlowerTableViewCell.swift */; };
+		BDE4FBF328B35BF6001FCEC1 /* FlowerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDE4FBF128B35BF6001FCEC1 /* FlowerTableViewCell.xib */; };
+		BDE4FBF528B35F97001FCEC1 /* LandingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4FBF428B35F97001FCEC1 /* LandingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDE4FBB628B24F1F001FCEC1 /* flower-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flower-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE4FBB928B24F1F001FCEC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDE4FBBB28B24F1F001FCEC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BDE4FBBD28B24F1F001FCEC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDE4FBBD28B24F1F001FCEC1 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		BDE4FBC028B24F1F001FCEC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDE4FBC228B24F22001FCEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDE4FBC528B24F22001FCEC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		BDE4FBCF28B24FF6001FCEC1 /* UIImageView+Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Caching.swift"; sourceTree = "<group>"; };
 		BDE4FBD128B2501E001FCEC1 /* UIViewController+HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyboard.swift"; sourceTree = "<group>"; };
 		BDE4FBD328B25044001FCEC1 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		BDE4FBF028B35BF6001FCEC1 /* FlowerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerTableViewCell.swift; sourceTree = "<group>"; };
+		BDE4FBF128B35BF6001FCEC1 /* FlowerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlowerTableViewCell.xib; sourceTree = "<group>"; };
+		BDE4FBF428B35F97001FCEC1 /* LandingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +68,11 @@
 		BDE4FBB828B24F1F001FCEC1 /* flower-list */ = {
 			isa = PBXGroup;
 			children = (
+				BDE4FBED28B35635001FCEC1 /* Scenes */,
 				BDE4FBCD28B24FAD001FCEC1 /* Views */,
 				BDE4FBCE28B24FB2001FCEC1 /* Extensions */,
 				BDE4FBB928B24F1F001FCEC1 /* AppDelegate.swift */,
 				BDE4FBBB28B24F1F001FCEC1 /* SceneDelegate.swift */,
-				BDE4FBBD28B24F1F001FCEC1 /* ViewController.swift */,
 				BDE4FBBF28B24F1F001FCEC1 /* Main.storyboard */,
 				BDE4FBC228B24F22001FCEC1 /* Assets.xcassets */,
 				BDE4FBC428B24F22001FCEC1 /* LaunchScreen.storyboard */,
@@ -78,6 +84,7 @@
 		BDE4FBCD28B24FAD001FCEC1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDE4FBEF28B35BCB001FCEC1 /* FlowerTableViewCell */,
 				BDE4FBD328B25044001FCEC1 /* Loader.swift */,
 			);
 			path = Views;
@@ -90,6 +97,32 @@
 				BDE4FBD128B2501E001FCEC1 /* UIViewController+HideKeyboard.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BDE4FBED28B35635001FCEC1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4FBEE28B3563B001FCEC1 /* Landing */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BDE4FBEE28B3563B001FCEC1 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4FBBD28B24F1F001FCEC1 /* LandingViewController.swift */,
+				BDE4FBF428B35F97001FCEC1 /* LandingModel.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		BDE4FBEF28B35BCB001FCEC1 /* FlowerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4FBF028B35BF6001FCEC1 /* FlowerTableViewCell.swift */,
+				BDE4FBF128B35BF6001FCEC1 /* FlowerTableViewCell.xib */,
+			);
+			path = FlowerTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +185,7 @@
 			files = (
 				BDE4FBC628B24F22001FCEC1 /* LaunchScreen.storyboard in Resources */,
 				BDE4FBC328B24F22001FCEC1 /* Assets.xcassets in Resources */,
+				BDE4FBF328B35BF6001FCEC1 /* FlowerTableViewCell.xib in Resources */,
 				BDE4FBC128B24F1F001FCEC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,10 +198,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE4FBD028B24FF6001FCEC1 /* UIImageView+Caching.swift in Sources */,
-				BDE4FBBE28B24F1F001FCEC1 /* ViewController.swift in Sources */,
+				BDE4FBBE28B24F1F001FCEC1 /* LandingViewController.swift in Sources */,
 				BDE4FBD428B25044001FCEC1 /* Loader.swift in Sources */,
+				BDE4FBF528B35F97001FCEC1 /* LandingModel.swift in Sources */,
 				BDE4FBBA28B24F1F001FCEC1 /* AppDelegate.swift in Sources */,
 				BDE4FBBC28B24F1F001FCEC1 /* SceneDelegate.swift in Sources */,
+				BDE4FBF228B35BF6001FCEC1 /* FlowerTableViewCell.swift in Sources */,
 				BDE4FBD228B2501E001FCEC1 /* UIViewController+HideKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
