@@ -7,32 +7,46 @@
 
 import UIKit
 
-class LandingViewController: UIViewController, UITableViewDataSource {
+protocol LandingViewControllerInterface: AnyObject {
+  func displayAllFlowers(viewModel: Landing.FetchAllFlowers.ViewModel)
+}
+
+class LandingViewController: UIViewController, UITableViewDataSource, LandingViewControllerInterface {
+
+  private var flowerList: [DisplayedFlower] = []
+
+  var interactor: LandingInteractorInterface!
 
   @IBOutlet weak var tableView: UITableView!
 
-  var mockData: [DisplayedFlower] = [
-    DisplayedFlower(
-      id: "1", title: "Rose 1", description: "Example of Rose 1",
-      imagePath: "https://www.flowersngarden.com/imagens/bd/rosa0040.jpg"),
-    DisplayedFlower(
-      id: "2", title: "Rose 2", description: "Example of Rose 2",
-      imagePath: "https://www.flowersngarden.com/imagens/bd/rosa0041.jpg"),
-    DisplayedFlower(
-      id: "3", title: "Rose 3", description: "Example of Rose 3",
-      imagePath: "https://www.flowersngarden.com/imagens/bd/rosa0042.jpg"),
-  ]
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    configure()
+  }
 
+  // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
     tableView.register(
       UINib(nibName: FlowerTableViewCell.cellIdentifier, bundle: nil),
       forCellReuseIdentifier: FlowerTableViewCell.cellIdentifier)
+    interactor.fetchAllFlower()
   }
 
+  // MARK: - VIP Configuration
+  private func configure() {
+    let presenter = LandingPresenter()
+    let interactor = LandingInteractor()
+
+    presenter.viewController = self
+    interactor.presenter = presenter
+    self.interactor = interactor
+  }
+
+  // MARK: - Table View Data Source
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return mockData.count
+    return flowerList.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,7 +56,15 @@ class LandingViewController: UIViewController, UITableViewDataSource {
       as! FlowerTableViewCell
     cell.configure(
       with: FlowerTableViewCellViewModel(
-        title: mockData[index].title, subtitle: mockData[index].description, thumbnail: mockData[index].imagePath))
+        title: flowerList[index].title, subtitle: flowerList[index].description, thumbnail: flowerList[index].imagePath)
+    )
     return cell
+  }
+
+  func displayAllFlowers(viewModel: Landing.FetchAllFlowers.ViewModel) {
+    flowerList = viewModel.flowers
+    DispatchQueue.main.async {
+      self.tableView.reloadData()
+    }
   }
 }

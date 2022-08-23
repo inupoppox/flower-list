@@ -13,3 +13,20 @@ struct DisplayedFlower {
   var description: String
   var imagePath: String
 }
+
+struct Landing {
+  struct FetchAllFlowers {
+    /// Data struct sent to Interactor
+    struct Request {}
+
+    /// Data struct sent to Present
+    struct Response {
+      var flowers: GetAllFlowers.Response
+    }
+
+    /// Data struct sent to View Controller
+    struct ViewModel {
+      var flowers: [DisplayedFlower]
+    }
+  }
+}
